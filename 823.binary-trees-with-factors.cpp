@@ -22,10 +22,8 @@ class Solution {
             for (int j : arr) {
                 if (j > sqrt(i)) break;
                 if ((i % j == 0) && s.count(i / j)) {
-                    if (i / j == j)
-                        m[i] = (m[i] + m[j] * m[j]) % MOD;
-                    else
-                        m[i] = (m[i] + m[j] * m[i / j] * 2) % MOD;
+                    if (i / j == j) m[i] = (m[i] + m[j] * m[j]) % MOD;
+                    else m[i] = (m[i] + m[j] * m[i / j] * 2) % MOD;
                 }
             }
         }

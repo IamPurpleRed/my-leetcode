@@ -1,3 +1,4 @@
 {
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, AccessModifierOffset: -2, AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: AllIfsAndElse, IndentWidth: 4, TabWidth: 4 }",
     "C_Cpp.errorSquiggles": "disabled"
 }

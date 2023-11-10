@@ -32,10 +32,8 @@ class NestedIterator {
   public:
     void iter(vector<NestedInteger> &nestedList) {
         for (auto x : nestedList) {
-            if (x.isInteger())
-                q.push(x.getInteger());
-            else
-                iter(x.getList());
+            if (x.isInteger()) q.push(x.getInteger());
+            else iter(x.getList());
         }
     }
 

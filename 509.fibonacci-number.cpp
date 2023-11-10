@@ -16,8 +16,7 @@ class Solution {
 
     int recursive(int n) {
         if (n == 0) return 0;
-        if (sol[n] != 0)
-            return sol[n];
+        if (sol[n] != 0) return sol[n];
         else {
             sol[n] = recursive(n - 1) + recursive(n - 2);
             return sol[n];

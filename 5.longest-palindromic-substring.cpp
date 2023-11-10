@@ -24,8 +24,7 @@ class Solution {
                 if (s[temps - 1] == s[tempe + 1]) {
                     temps--;
                     tempe++;
-                } else
-                    break;
+                } else break;
             }
             if (tempe - temps + 1 > end - start + 1) {
                 start = temps;
@@ -44,8 +43,7 @@ class Solution {
                 if (s[temps - 1] == s[tempe + 1]) {
                     temps--;
                     tempe++;
-                } else
-                    break;
+                } else break;
             }
             if (temps < tempe && tempe - temps + 1 > end - start + 1) {
                 start = temps;
