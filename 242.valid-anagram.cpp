@@ -8,24 +8,18 @@
 class Solution {
   public:
     bool isAnagram(string s, string t) {
-        unordered_map<char, int> m;
-        bool status = true;
-        for (char c : s) {
-            if (m[c]) m[c]++;
-            else m[c] = 1;
-        }
+        unordered_map<char, int> um;
+        for (char c : s) um[c] = (um.count(c)) ? um[c] + 1 : 1;
         for (char c : t) {
-            if (!m[c]) {
-                status = false;
-                break;
-            } else {
-                m[c]--;
-                if (m[c] == 0) m.erase(c);
+            if (!um.count(c)) return false;
+            else if (um[c] == 0) return false;
+            else {
+                um[c]--;
+                if (um[c] == 0) um.erase(c);
             }
         }
-        if (!m.empty()) status = false;
 
-        return status;
+        return um.empty() ? true : false;
     }
 };
 // @lc code=end
