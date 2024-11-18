@@ -1,15 +1,13 @@
 /*
- * @lc app=leetcode id=57 lang=cpp
+ * @lc app=leetcode id=56 lang=cpp
  *
- * [57] Insert Interval
+ * [56] Merge Intervals
  */
 
 // @lc code=start
 class Solution {
   public:
-    vector<vector<int>> insert(vector<vector<int>>& intervals,
-                               vector<int>& newInterval) {
-        intervals.push_back(newInterval);
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
         sort(intervals.begin(), intervals.end());
 
         vector<vector<int>> res;
